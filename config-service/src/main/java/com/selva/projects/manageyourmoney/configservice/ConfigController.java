@@ -10,7 +10,7 @@ public class ConfigController {
 	@Autowired
 	private ConfigService configService;
 
-	@GetMapping("/account-configs")
+	@GetMapping("/account-configs1")
 	public AccountConfiguration getAccountConfigs() {
 		return new AccountConfiguration(configService.getAccointIdMaskPrefix(),
 				configService.isReturnOpenAccountsOnly());

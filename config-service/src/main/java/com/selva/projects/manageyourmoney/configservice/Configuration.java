@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix="account")
+@ConfigurationProperties(prefix="account-service")
 public class Configuration {
 	
 	private String idMaskPrefix;
