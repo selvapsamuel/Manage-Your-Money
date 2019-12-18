@@ -1,13 +1,13 @@
 package com.selva.projects.manageyourmoney.statementservice;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class StatementServiceApplicationTests {
+public class StatementServiceApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
