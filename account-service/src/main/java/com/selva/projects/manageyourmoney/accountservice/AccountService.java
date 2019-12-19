@@ -4,15 +4,22 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AccountService {
+	
+	@Autowired
+	private Configuration configuration;
 
 	public Account getAccount(String bankId, String userId, String accountId) {
 
 		Account account = new Account("123", AccountType.CHECKING, Ownership.PRIMARY, new BigDecimal(10000),
 				AccountStatus.OPEN);
+		
+		System.out.println("flag 1: "+configuration.getIdMaskPrefix());
+		System.out.println("flag 2: "+configuration.isReturnOpenAccountsOnly());
 		return account;
 	}
 	
