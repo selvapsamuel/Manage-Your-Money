@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.selva.projects.manageyourmoney.account.Account;
+
 @RestController
 public class AccountsController {
 	
@@ -20,7 +22,7 @@ public class AccountsController {
 		return accountService.getAccount(bankId,userId,accountId);
 	}
 	
-	@GetMapping("/bank/{bankId}/users/{userId}")
+	@GetMapping("/bank/{bankId}/users/{userId}/accounts")
 	public List<Account> getAccounts(@PathVariable String bankId, @PathVariable String userId) {
 
 		return accountService.getAccounts(bankId,userId);

@@ -1,4 +1,4 @@
-package com.selva.projects.manageyourmoney.accountservice;
+package com.selva.projects.manageyourmoney.account;
 
 import java.math.BigDecimal;
 
