@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.selva.projects.manageyourmoney.account.Account;
@@ -22,8 +23,11 @@ public class StatementService {
 	public AccountStatement getStatement( String bankId,  String userId,
 			 String accountId,  String startDate,  String endDate) {
 		
-		Account account = proxy.getAccount(bankId, userId, accountId);
+		ResponseEntity<Account> responseEntity = proxy.getAccount(bankId, userId, accountId);
+		
+		Account account = responseEntity.getBody();
 		System.out.println("Account retrieved by Feign is: "+account);
+		System.out.println("Account retrieved from port: "+responseEntity.getHeaders().getFirst("Server-Port"));
 		
 		AccountStatement statement = new AccountStatement();
 		
