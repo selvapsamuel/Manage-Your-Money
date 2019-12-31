@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.selva.projects.manageyourmoney.account.Account;
 
-@FeignClient(name="account-service")
+@FeignClient(name="api-gateway")
 @RibbonClient(name="account-service")
 public interface AccountServiceProxy {
 
-	@GetMapping("/bank/{bankId}/users/{userId}/accounts/{accountId}")
+	@GetMapping("/account-service/bank/{bankId}/users/{userId}/accounts/{accountId}")
 	public ResponseEntity<Account> getAccount(@PathVariable("bankId") String bankId, @PathVariable("userId") String userId,
 			@PathVariable("accountId") String accountId);
 }

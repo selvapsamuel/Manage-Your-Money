@@ -3,3 +3,4 @@ auth-service= 8080
 account-service= 8081,8084
 statement-service= 8082
 fundstransfer-service= 8083
+api-gateway=8765

@@ -28,7 +28,10 @@
         <module>statement-service</module>
         <module>auth-service</module>
 		<module>fundstransfer-service</module>
+		<module>manageyourmoney-dto</module>
 		<module>config-service</module>
+		<module>naming-server</module>
+		<module>api-gateway</module>
     </modules>
  
     <dependencies>
